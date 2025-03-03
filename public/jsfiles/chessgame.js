@@ -16,7 +16,7 @@ let playerRole=null;
 
 const renderBoard=()=>{
     const board = chess.board();
-    boardElement.innerHTML="";
+    boardElement.innerHTML="";  
 
     board.forEach((row,rowindex) => {
         row.forEach((square, squareindex)=>{
@@ -99,7 +99,7 @@ const handleMove=(source,target)=>{
     socket.emit("move",move);
 };
 
-
+//getpieces
 const getPieceUniCode = (piece) => {
     const unicodePieces = {
         p: '♙',  // White Pawn
